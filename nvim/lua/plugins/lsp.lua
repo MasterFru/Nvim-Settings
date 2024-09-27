@@ -1,0 +1,63 @@
+return {
+  {
+    "williamboman/mason.nvim",
+    config = function()
+      require("mason").setup()
+    end,
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require("mason-lspconfig").setup({
+        ensure_installed = {
+          "bashls",
+          "phpactor",
+          "cssls",
+          "clangd",
+          "cmake",
+          "rust_analyzer",
+          "julials",
+          "dockerls",
+          "docker_compose_language_service",
+          "eslint",
+          "emmet_language_server",
+          "lua_ls",
+          "html",
+          "ts_ls",
+          "autotools_ls",
+          "markdown_oxide",
+          "pylsp",
+          "tailwindcss",
+          "yamlls",
+          "jsonls",
+          "biome",
+        },
+      })
+    end,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("lspconfig").clangd.setup({})
+      require("lspconfig").cmake.setup({})
+      require("lspconfig").emmet_language_server.setup({})
+      require("lspconfig").dockerls.setup({})
+      require("lspconfig").eslint.setup({})
+      require("lspconfig").html.setup({})
+      require("lspconfig").jsonls.setup({})
+      require("lspconfig").lua_ls.setup({})
+      require("lspconfig").ts_ls.setup({})
+      require("lspconfig").yamlls.setup({})
+      require("lspconfig").biome.setup({})
+      require("lspconfig").tailwindcss.setup({})
+      require("lspconfig").docker_compose_language_service.setup({})
+      require("lspconfig").cssls.setup({})
+      require("lspconfig").bashls.setup({})
+      require("lspconfig").phpactor.setup({})
+      require("lspconfig").julials.setup({})
+      require("lspconfig").markdown_oxide.setup({})
+      require("lspconfig").pylsp.setup({})
+      require("lspconfig").autotools_ls.setup({})
+    end,
+  },
+}
