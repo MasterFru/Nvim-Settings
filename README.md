@@ -1,116 +1,139 @@
 
-# ⚡️ **MasterFru's Ultimate Neovim + Kitty Setup** ⚡️
-
-> 🛠 **Power Up Your Development Environment!** This setup will **revolutionize** how you code, offering a sleek, high-performance terminal + editor experience. **Are you ready?** 🔥
+# ⚡️ **MasterFru's Ultimate Neovim + Kitty Setup** ⚡️  
+**Supercharge Your Development Environment!**  
+This guide will transform your coding space into a sleek, high-performance powerhouse. Ready to level up? 🔥  
 
 ---
 
-## 🛠️ **Installation Steps**
+## 🚀 **Installation Steps**
 
-### Step 1: **Install the Configuration Files**
-Unleash the power with one simple command:
+### **Step 1: Install the Configuration Files**
+Let's kick things off with one powerful command:
 
-\`\`\`bash
+```bash
 unzip nvim.zip && rm -rf ~/.local/share/nvim && mv nvim ~/.config
-\`\`\`
+```
 
-> _*Pro Tip*_: This replaces your current Neovim config with MasterFru's supercharged setup!
+⚡ **Pro Tip:** This will replace your current Neovim config with **MasterFru's** optimized setup—fast, efficient, and fully customized!
 
 ---
 
-### Step 2: **Install Kitty & ImageMagick**
-Upgrade your terminal with [Kitty](https://sw.kovidgoyal.net/kitty/)—fast, minimal, and infinitely customizable. Also, install **ImageMagick** for smooth image rendering.
+### **Step 2: Install Kitty & ImageMagick**
+Next, upgrade your terminal experience with **Kitty**, a blazing-fast, minimal terminal emulator.  
+Also, install **ImageMagick** for smooth image rendering capabilities.
 
-\`\`\`bash
+```bash
 sudo apt install kitty imagemagick
-\`\`\`
+```
 
 ---
 
-### Step 3: **Customize Kitty to Perfection**
-Now, give your terminal a bold look with a **customized theme**. Open your \`kitty.conf\`:
+### **Step 3: Customize Kitty with a Stunning Theme**
+Let’s give Kitty a jaw-dropping look. Open your Kitty configuration:
 
-\`\`\`bash
+```bash
 nvim ~/.config/kitty/kitty.conf
-\`\`\`
+```
 
-Paste the following to unlock a stunning interface:
+Now, paste the following:
 
-\`\`\`ini
+```ini
 font_size 12.0
+
 # Fonts Configuration
-font_family Hack Nerd Font
+font_family      Hack Nerd Font
 confirm_os_window_close 0
-cursor_shape beam
+cursor_shape     beam
 linux_display_server auto
-\`\`\`
+```
+
+Your terminal's about to look as sharp as your code. 💻
 
 ---
 
-### Step 4: **Install the Catppuccin-Mocha Theme**
-Your terminal is about to look smooth like a mocha latte. 🥤
+### **Step 4: Install the Catppuccin-Mocha Theme**
+Transform your terminal into a visual delight with the **Catppuccin-Mocha** theme. Open the theme file:
 
-\`\`\`bash
+```bash
 nvim ~/.config/kitty/Catppuccin-Mocha.conf
-\`\`\`
+```
 
-Here's a sneak peek at the beautiful colors you'll get:
+Paste this gorgeous color scheme:
 
-\`\`\`ini
-foreground #CDD6F4
-background #1E1E2E
-cursor #F5E0DC
-active_border_color #B4BEFE
-\`\`\`
+```ini
+foreground              #CDD6F4
+background              #1E1E2E
+cursor                  #F5E0DC
+active_border_color     #B4BEFE
+```
+
+Now your terminal is smooth, stylish, and easy on the eyes! 🥤
 
 ---
 
-### Step 5: **Install Additional Dependencies**
+### **Step 5: Install Additional Dependencies**
+Unleash the full potential of your setup by installing these essential dependencies:
 
-\`\`\`bash
+```bash
 sudo apt-get install libssl-dev libvips-dev libsixel-dev libchafa-dev libtbb-dev
 git clone https://github.com/jstkdng/ueberzugpp.git
-\`\`\`
+```
+
+Make sure everything is compiled and set up:
+
+```bash
+cd ueberzugpp
+mkdir build && cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DENABLE_X11=OFF -DENABLE_OPENCV=OFF ..
+cmake --build .
+sudo mv ueberzugpp /usr/bin
+```
 
 ---
 
-### Step 6: **Complete the Setup: LazyGit, Homebrew & Telescope**
+### **Step 6: Final Touches – LazyGit, Homebrew & Telescope**
+For seamless Git operations and fast file navigation:
 
-\`\`\`bash
+```bash
 brew install lazygit
 cd ~/.local/share/nvim/telescope-fzf-native.nvim
 cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release
-\`\`\`
+```
+
+Now, you have everything you need for rapid coding and Git management in your terminal! 🚀
 
 ---
 
-## 🚀 **Enjoy Your Ultimate Setup**
+## 🎨 **Enjoy Your Ultimate Setup!**
 
-> 🔥 **Neovim + Kitty + MasterFru's Config = Coding Bliss** 🔥
-
-After completing the setup, you'll have an unparalleled development environment optimized for **speed**, **customization**, and **visual beauty**.
-
-![Terminal Preview](https://example.com/terminal_preview_image)  
-*Preview of your new terminal setup in action!*
+With **Neovim + Kitty + MasterFru's Config**, you’ve got the perfect balance of performance, customization, and aesthetics. Whether you’re coding, managing projects, or tweaking your environment—this setup will have your back. ⚡
 
 ---
 
-## ⚡️ **Pro Tip**: Add more Customizations!
-- 🎨 Explore more Kitty themes [here](https://sw.kovidgoyal.net/kitty/conf/#kitty-themes).
-- 🧩 Use LazyGit for smooth Git operations right from your terminal.
-- 🌈 Telescope’s fuzzy finding will make navigating your files lightning-fast.
+### 🔥 **What's Next?** 🔥  
+- **Customize**: Play around with themes, fonts, and configurations.
+- **Speed Up**: Telescope will make searching files feel like light-speed.
+- **Power Up**: Use LazyGit for instant Git control from your terminal.
+
+---
+
+## **Preview**  
+*See the magic in action!*
+
+![Kitty Terminal Screenshot](https://user-images.githubusercontent.com/placeholder.jpg)  
+*Above: A sneak peek of your newly pimped-out terminal!*
 
 ---
 
 ## 💡 **Contributors**
-Special thanks to:
-- **MasterFru** for the incredible setup guide!  
-- 🎨 [Catppuccin Team](https://github.com/catppuccin/kitty) for the beautiful theme.
+- **MasterFru** for the ultimate Neovim and Kitty setup guide! 🛠
+- **Catppuccin Team** for the beautiful Mocha theme. 🎨
 
 ---
 
-## 🎯 **Wrap Up**
+## 🎉 **Congratulations!** 🎉  
+You’ve just completed **MasterFru's Ultimate Neovim + Kitty Setup**. Now sit back, code like a pro, and enjoy your smooth, blazing-fast environment. 😎
 
-Congratulations! 🎉 You've just completed the **Ultimate Neovim + Kitty Setup**. Your coding experience is now faster, more beautiful, and uniquely yours.
+---
 
-**Happy Coding!** 😎
+Happy coding! 🚀
